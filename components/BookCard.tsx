@@ -1,7 +1,7 @@
+import React from "react";
+import Image from "next/image";
 import { Book } from "@/utils/customTypes";
 import { formatCurrency } from "@/utils/currencyFormatter";
-import Image from "next/image";
-import React from "react";
 
 const BooksCard = (({ book }: { book: Book }) => (
   <div className="py-2 w-fit shadow-md mb-4">
