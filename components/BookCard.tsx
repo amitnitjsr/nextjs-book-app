@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 
 const BooksCard = (({ book }: { book: Book }) => (
-  <div className="py-2 w-fit">
+  <div className="py-2 w-fit shadow-md mb-4">
     <div className="bg-customWhite w-fit">
       <Image
         className="object-cover w-[187px] h-[187px]"

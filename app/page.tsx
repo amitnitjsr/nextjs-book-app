@@ -7,6 +7,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { ScaleLoader } from "react-spinners";
 
 export default function Home() {
+
   const [hasMore, setHasMore] = useState(true);
   const [books, setBooks] = useState<Book[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -18,9 +19,9 @@ export default function Home() {
     await Axios
       .get(`/books?page=${query.current.page}&limit=${query.current.per_page}`)
       .then((res) => {
-        const arr = reset ? res.data.data : [...books, ...res.data.data];
-        setBooks(arr);
-        if (res.data.total > arr.length) {
+        const arrList = reset ? res.data.data : [...books, ...res.data.data];
+        setBooks(arrList);
+        if (res.data.total > arrList.length) {
           setHasMore(true);
           query.current.page = query.current.page + 1;
         } else {
@@ -72,9 +73,9 @@ export default function Home() {
               <div className="m-4 text-lg text-center font-bold font-notaSans">
                 Books
               </div>
-              {books && books.length > 0 ? (
+              {books && books?.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-1 m-1 place-items-center">
-                  {books?.map((book: Book) => (
+                  {books.map((book: Book) => (
                     <BooksCard key={book.id} book={book} />
                   ))}
                 </div>
