@@ -4,7 +4,7 @@ export interface Book {
   price: number;
   title: string;
   description: string;
-  image: string;
+  cover_image: string;
 }
 
 export interface ApiQuery {
