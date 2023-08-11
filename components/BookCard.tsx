@@ -1,4 +1,4 @@
-import { Book } from "@/utils/curstomTypes";
+import { Book } from "@/utils/customTypes";
 import { formatCurrency } from "@/utils/currencyFormatter";
 import Image from "next/image";
 import React from "react";

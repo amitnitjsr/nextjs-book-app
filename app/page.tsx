@@ -1,7 +1,7 @@
 "use client";
 import BooksCard from "@/components/BookCard";
 import Axios from "@/libs/axios";
-import { ApiQuery, Book } from "@/utils/curstomTypes";
+import { ApiQuery, Book } from "@/utils/customTypes";
 import { useEffect, useRef, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { ScaleLoader } from "react-spinners";
